@@ -14,9 +14,8 @@ csv_lines = sc.parallelize(["Leche, Huevos, Pan", "Manzanas, Peras", "Leche, Cho
 
 productos_unicos = (csv_lines
                     .flatMap(lambda linea: linea.split(","))
-                    .map(lambda prod: prod.strip()) # Elimina espacios extra
+                    .map(lambda prod: prod.strip())
                     .distinct())
 
 print("Productos únicos:", productos_unicos.collect())
 print("Cantidad de productos únicos:", productos_unicos.count())
-# Salida esperada: 6 productos únicos

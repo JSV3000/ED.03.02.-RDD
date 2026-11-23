@@ -18,4 +18,3 @@ word_count = (rdd_texto
               .reduceByKey(lambda a, b: a + b))
 
 print("Conteo de palabras:", word_count.collect())
-# Salida esperada: [('hola', 2), ('mundo', 2), ('spark', 2)]

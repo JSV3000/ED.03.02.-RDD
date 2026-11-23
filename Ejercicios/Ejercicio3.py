@@ -17,4 +17,3 @@ precios_eur = (precios_usd
                .map(lambda x: round(x * 0.9, 2)))
 
 print("Precios en EUR (>= 20 USD):", precios_eur.collect())
-# Salida esperada: [22.5, 36.0, 90.0]
